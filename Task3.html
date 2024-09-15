@@ -63,6 +63,9 @@
             
             // Add non-empty string todos to the todo list
             // YOUR CODE HERE 
+            if (createdTodo != '') {
+                addTodo(createdTodo);
+            }
 
             // reset the input value after add todo is clicked.
             todoInput.value = '';
@@ -90,11 +93,14 @@
 
         function deleteTodo(index) {
             // YOUR CODE HERE (recycle your work from former tasks)
+            todoList.splice(index, 1);
             refreshTodoList()
         }
 
         function addTodo(todo) {
+            console.log("added");
             // YOUR CODE HERE (recycle your work from former tasks)
+            todoList.push(todo);
             refreshTodoList()
         }
     </script>
